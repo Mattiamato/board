@@ -1,0 +1,39 @@
+        <table id="stationboard">
+            <thead>
+            <tr>
+                <th align="left">Name</th>
+                <th>&nbsp;</th>
+                <th align="left">To</th>
+                <th>&nbsp;</th>
+                <th align="left">Time Left</th>
+                <th>&nbsp;</th>
+                <th align="left">Delay</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tram of tramRes?.stationboard"
+                    [ngClass]="{'green': calculateDifference(tram?.passList[0].arrival) >= 3,
+                    'yellow': calculateDifference(tram?.passList[0].arrival) <= 3,
+                    'red': calculateDifference(tram?.passList[0].arrival) < 2 }">
+                    <td>{{tram?.name}}</td>
+                    <td></td>
+                    <td>{{tram?.to}}</td>
+                    <td></td>
+                    <td>{{calculateDifference(tram?.passList[0].arrival)}} min</td>
+                    <td></td>
+                    <td>{{tram?.passList[0].delay / 60000}} min</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <style>
+            .green {
+                background-color: green;
+            }
+            .yellow {
+                background-color: yellow;
+            }
+            .red {
+                background-color: red;
+            }
+        </style>

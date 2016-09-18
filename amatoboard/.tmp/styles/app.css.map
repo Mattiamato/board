@@ -1,0 +1,15 @@
+{
+	"version": 3,
+	"file": "app.css",
+	"sources": [
+		"../../src/styles/app.scss",
+		"../../src/styles/lib/_module.scss",
+		"../../src/styles/lib/_functions.scss",
+		"../../src/styles/lib/_mixins.scss",
+		"../../src/styles/base/_module.scss",
+		"../../src/styles/base/_variables.scss",
+		"../../src/styles/vendor/_module.scss"
+	],
+	"mappings": "",
+	"names": []
+}
